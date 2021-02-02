@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_background_color"
+    tools:context=".Fragments.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_common"
+        android:layout_above="@+id/btnBookTutorial">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_small"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="false"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="@dimen/margin_fifteen">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/margin_ten">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llCourse"
+                    android:orientation="vertical">
+
+                    <com.example.locktrust.widgets.CustomTextViewExtraBold
+                        style="@style/wrapBoth"
+                        android:layout_width="match_parent"
+                        android:id="@+id/tvSubjectTitle"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_small"
+                        android:text="@string/booking_confirmation"
+                        android:textSize="@dimen/common_text"
+                        android:minLines="2"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/darkBlue"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_small"
+                       />
+                    <!--   parent profile-->
+                    <RelativeLayout
+                        android:id="@+id/rlProfile"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin_common">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserProfilePic"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FFF"
+                            android:src="@drawable/man"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ivUserProfilePic"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/margin_common"
+                            android:orientation="vertical">
+
+                            <com.example.locktrust.widgets.CustomTextViewHeavy
+                                android:id="@+id/tvUserName"
+                                style="@style/tvCommon"
+                                android:textSize="@dimen/common_text"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/darkBlue"
+                                android:layout_height="wrap_content"
+                                tools:text="Ankit Sharma" />
+
+                            <com.example.locktrust.widgets.TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvUserType"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkgrey"
+                                android:textSize="@dimen/text_small"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="@string/parent" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <!-- course Details-->
+                    <LinearLayout
+                        style="@style/matchWidth"
+                        android:layout_marginHorizontal="@dimen/margin_common"
+                        android:layout_marginTop="@dimen/margin_common"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/matchWidth"
+                             android:orientation="horizontal">
+                            <com.example.locktrust.widgets.TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkgrey"
+                                android:textSize="@dimen/common_text"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/course_name" />
+
+                        <com.example.locktrust.widgets.CustomTextViewHeavy
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                 android:id="@+id/tvCourseName"
+                                android:layout_weight="0.6"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/common_text"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="Applied Mathamatics" />
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/matchWidth"
+                            android:layout_marginTop="@dimen/margin_ten"
+                             android:orientation="horizontal">
+                            <com.example.locktrust.widgets.TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkgrey"
+                                android:textSize="@dimen/common_text"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/_class" />
+
+                        <com.example.locktrust.widgets.CustomTextViewHeavy
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                 android:id="@+id/tvClassName"
+                                android:layout_weight="0.6"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/common_text"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                tools:text="7th" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_common"
+                        android:layout_marginHorizontal="@dimen/margin_ten"
+                        android:background="@color/colorGray"/>
+<!--                    tutor details-->
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_common"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin_common">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivTutorProfilePic"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FFF"
+                            android:src="@drawable/man"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ivTutorProfilePic"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/margin_common"
+                            android:orientation="vertical">
+
+                            <com.example.locktrust.widgets.CustomTextViewHeavy
+                                android:id="@+id/tvTutorName"
+                                style="@style/tvCommon"
+                                android:textSize="@dimen/common_text"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/darkBlue"
+                                android:layout_height="wrap_content"
+                                tools:text="fuzia Khimani" />
+
+                            <com.example.locktrust.widgets.TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/darkgrey"
+                                android:textSize="@dimen/text_small"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/tutor" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_common"
+                        android:layout_marginHorizontal="@dimen/margin_ten"
+                        android:background="@color/colorGray"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rvBookSlots"
+
+                        android:layout_marginTop="@dimen/margin_common"
+                        tools:listitem="@layout/list_item_book_tutorial"
+                        tools:itemCount="3"/>
+
+                    <com.example.locktrust.widgets.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvChangeDateTime"
+                        android:padding="@dimen/margin_ten"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_small"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/margin_common"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/change_date_time" />
+
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+    <!--<androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:layout_above="@+id/btnBookSlot"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/layoutBaseHome"
+            style="@style/matchBoth"
+
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDateSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_common"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                tools:itemCount="2"
+                tools:listitem="@layout/list_item_check_availability_date" />
+            <LinearLayout
+               style="@style/matchWidth"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_common"
+                android:orientation="horizontal">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/wrapBoth"
+                    android:textSize="@dimen/common_text"
+                    android:id="@+id/tvSlotBook"
+                    android:textColor="#ff0000"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    tools:text="2 slot booked"
+                    />
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/wrapBoth"
+                    android:textSize="@dimen/common_text"
+                    android:id="@+id/tvSlotAvailable"
+                    android:textColor="#00ff00"
+                    android:layout_marginStart="@dimen/margin_thirty"
+                    tools:text="10 slot booked"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTimeSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_common"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                tools:itemCount="2"
+                tools:listitem="@layout/list_item_check_availability_date" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>-->
+
+    <com.example.locktrust.widgets.CustomTextViewHeavy
+        android:id="@+id/btnBookTutorial"
+        style="@style/tvBottomCourseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_common"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_background"
+        android:text="@string/book_your_tutorial"
+        android:textColor="@color/white" />
+</RelativeLayout>

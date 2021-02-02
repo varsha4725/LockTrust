@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCourseList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:padding="@dimen/margin_common"
+        app:cardCornerRadius="@dimen/margin_fifteen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_ten"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/matchWidth"
+                android:orientation="horizontal"
+                >
+
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/BoldText"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/tvSubjectStatus"
+                    android:textSize="@dimen/text_sixteen"
+                    android:id="@+id/tvSubjectTitle"
+                    app:layout_constraintRight_toLeftOf="@+id/tvSubjectStatus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Subject title"
+                    android:layout_marginEnd="@dimen/margin_five"
+             />
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_sixteen"
+                    android:id="@+id/tvSubjectStatus"
+                    tools:text="Status"
+                    android:textColor="@color/red"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="MissingConstraints" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:orientation="horizontal">
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:id="@+id/tvTransactionDateTime"
+                    style="@style/BoldText"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/tvTransactionAmount"
+                    android:text="@string/transaction_id"
+                    android:textColor="@color/darkgrey" />
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:id="@+id/tvTransactionAmount"
+                    style="@style/BoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/red"
+                    tools:text="999" />
+
+            </RelativeLayout>
+
+       </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

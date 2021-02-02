@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/custom_border_round_popup"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerPopup"
+        android:orientation="vertical"
+        android:padding="15dp">-->
+
+
+
+    <RelativeLayout
+
+        android:id="@+id/llTitleClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/custom_border_round_popup_title"
+        >
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/tvClear"
+            style="@style/LargeBlackText"
+
+            android:layout_width="@dimen/sixty_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ten"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/filtwr_sort_label_background"
+            android:textColor="@color/colorBlack"
+            android:padding="@dimen/margin_five"
+            android:layout_centerInParent="true"
+            android:text="Clear"
+            android:gravity="center"
+
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/size_twenty"/>
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Tittle"
+
+            style="@style/MediumBlackText"
+            android:textColor="@color/colorWhite"
+            />
+
+
+    </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/svList"
+            android:layout_below="@+id/llTitleClear"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFilterList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    tools:listitem="@layout/list_item_multiple_selection"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:orientation="horizontal">
+                    <com.example.locktrust.widgets.TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnCancel"
+                        android:layout_weight="1"
+                        android:text="@string/cancel"
+                        android:gravity="center"
+                        android:textSize="@dimen/common_text"
+                        android:paddingVertical="@dimen/margin_ten"
+                        android:background="@color/darkBlue"
+                        android:textColor="@color/white"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightGrey"/>
+                    <com.example.locktrust.widgets.TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnOk"
+                        android:layout_weight="1"
+                        android:text="@string/ok"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/margin_ten"
+                        android:textSize="@dimen/common_text"
+
+                        android:background="@color/darkBlue"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+       <!-- <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkBlue"/>-->
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/darkBlue"/>-->
+   <!-- </LinearLayout>-->
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/matchBoth">
+
+    <LinearLayout
+        android:id="@+id/layout_success"
+        style="@style/matchBoth"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_above="@+id/llBottomLayout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_common"
+            android:src="@drawable/icon_paymentsuccess" />
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            style="@style/wrapBoth"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/success"
+            android:textColor="@color/skybluedark"
+            android:textSize="@dimen/text_Verylarge" />
+
+        <com.example.locktrust.widgets.TextView
+            style="@style/wrapBoth"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_fifty"
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:gravity="center"
+            android:text="@string/success_message"
+            android:textSize="@dimen/text_ten" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/btnScheduleNow"
+            style="@style/tvBottomCourseDetails"
+            android:background="@drawable/gradient_background"
+            android:text="@string/schedule_now"
+            android:textColor="@color/white" />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/btnEnQuireNow"
+            style="@style/tvBottomCourseDetails"
+            android:background="@drawable/button_back_blue_border"
+            android:text="@string/enquire_now"
+            android:textColor="@color/backColor" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_background_color">
+    <include layout="@layout/student_profile"
+        android:visibility="gone"></include>
+
+    <ScrollView
+        style="@style/matchBoth"
+        android:id="@+id/scrollParent"
+        android:layout_above="@+id/llBottomLayout"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_common"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserImage"
+                android:layout_width="@dimen/size_ninety"
+                android:layout_height="@dimen/size_ninety"
+                android:layout_marginTop="@dimen/margin_thirty"
+                android:src="@drawable/ic_user_default" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civEditButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/margin_fourty"
+                android:layout_marginTop="-25dp"
+                android:background="@drawable/button_gradient_background"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_edit" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etFullName"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="@dimen/margin_fifty"
+                    android:hint="@string/full_name"
+                    android:imeOptions="actionDone"
+                    android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM "
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etEmailId"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/email_id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etPhoneNumber"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="13" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etDateOfBirth"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/date_of_birth"
+
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etJoinDate"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/date_of_joining"
+
+                    android:editable="false"
+                    android:inputType="date"
+                    android:maxLength="10"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etCountry"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/country"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                   />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etState"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/state"
+                    android:nextFocusDown="@id/etCity"
+                    android:focusableInTouchMode="false"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    app:drawableRightCompat="@drawable/ic_drop_down"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etCity"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="10dp"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/city"
+                    android:nextFocusDown="@id/etAddress"
+                    android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM "
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    app:drawableRightCompat="@drawable/ic_drop_down"
+                   />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etAddress"
+                    style="@style/edtLogin"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:gravity="start|left"
+                    android:hint="@string/enter_address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:text="@string/gender"
+                android:textSize="@dimen/text_small" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <com.example.locktrust.widgets.CustomRedioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/male"
+                    android:textSize="@dimen/common_text" />
+
+                <com.example.locktrust.widgets.CustomRedioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/female"
+                    android:textSize="@dimen/common_text" />
+
+                <com.example.locktrust.widgets.CustomRedioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/other"
+                    android:textSize="@dimen/common_text" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/btnEditSave"
+            style="@style/tvBottomCourseDetails"
+            android:background="@drawable/gradient_background"
+            android:text="@string/edit"
+            android:textColor="@color/white" />
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/btnViewStudentProfile"
+            style="@style/tvBottomCourseDetails"
+            android:background="@drawable/button_back_blue_border"
+            android:text="@string/view_student_profile"
+            android:visibility="gone"
+            android:textColor="@color/darkBlue" />
+    </LinearLayout>
+</RelativeLayout>

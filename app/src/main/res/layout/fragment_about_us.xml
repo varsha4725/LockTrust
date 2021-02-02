@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.ContactUsFragment">
+
+  <ScrollView
+    style="@style/matchWidth"
+      android:scrollbars="none"
+      >
+      <LinearLayout
+          style="@style/matchWidth"
+          android:orientation="vertical"
+          android:layout_marginStart="@dimen/margin_layout_common"
+          android:layout_marginEnd="@dimen/margin_layout_common"
+          >
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_marginTop="@dimen/margin_common"
+              android:layout_height="200dp">
+              <VideoView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/vvAboutUs"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ivSampleImage"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/learning"
+               />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ivPlay"
+                tools:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/play"/>
+              <ProgressBar
+                  android:id="@+id/progressbar"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:indeterminateDrawable="@drawable/progress"
+                  android:layout_gravity="center"
+
+                  android:visibility="gone" />
+          </FrameLayout>
+          <com.example.locktrust.widgets.CustomTextViewHeavy
+             style="@style/wrapBoth"
+              android:layout_marginTop="@dimen/margin_common"
+              android:textSize="@dimen/text_sixteen"
+              android:textColor="@color/colorPrimaryDark"
+              android:text="@string/about_locktrust"/>
+            <com.example.locktrust.widgets.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_common"
+                android:text="@string/about_us_content"/>
+<!--        qualified tutors-->
+        <RelativeLayout
+            style="@style/matchWidth"
+            android:layout_marginTop="@dimen/margin_fifty">
+            <ImageView
+                style="@style/imgContactUs"
+                android:id="@+id/ivQualifiedTuto"
+                android:src="@drawable/qualified"/>
+            <LinearLayout
+                style="@style/wrapBoth"
+                android:layout_toEndOf="@+id/ivQualifiedTuto"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:orientation="vertical">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                   style="@style/tvAboutUs"
+                    android:textSize="@dimen/common_text"
+                    android:text="@string/qulified_tutors"
+                    />
+                <com.example.locktrust.widgets.TextView
+                    style="@style/tvContactUs"
+                    android:id="@+id/tvQualifiedTutors"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:text="@string/qualified_tuto_info"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+<!--          Personalised learning-->
+          <RelativeLayout
+              style="@style/matchWidth"
+              android:layout_marginTop="@dimen/margin_common">
+              <ImageView
+                style="@style/imgContactUs"
+                  android:id="@+id/ivPersonalLearning"
+                  android:src="@drawable/personalise_learning"/>
+              <LinearLayout
+                  style="@style/wrapBoth"
+                  android:layout_toEndOf="@+id/ivPersonalLearning"
+                  android:layout_marginStart="@dimen/margin_ten"
+                  android:orientation="vertical">
+                  <com.example.locktrust.widgets.CustomTextViewHeavy
+                      style="@style/tvAboutUs"
+                      android:textSize="@dimen/common_text"
+                      android:text="@string/personalised_learning"
+                      />
+                  <com.example.locktrust.widgets.TextView
+                      style="@style/tvContactUs"
+                      android:id="@+id/tvPersonalLearning"
+                      android:textSize="@dimen/text_small"
+                      android:layout_marginTop="@dimen/margin_ten"
+                      android:text="@string/personalised_learning_info"
+                      />
+
+
+              </LinearLayout>
+
+
+          </RelativeLayout>
+<!--           Engaging tutorials     -->
+          <RelativeLayout
+              style="@style/matchWidth"
+              android:layout_marginTop="@dimen/margin_common">
+              <ImageView
+                  style="@style/imgContactUs"
+                  android:id="@+id/ivEngagingTutorials"
+                  android:src="@drawable/engaging_tuto"/>
+              <LinearLayout
+                  style="@style/wrapBoth"
+                  android:layout_toEndOf="@+id/ivEngagingTutorials"
+                  android:layout_marginStart="@dimen/margin_ten"
+                  android:orientation="vertical">
+                  <com.example.locktrust.widgets.CustomTextViewHeavy
+                      style="@style/tvAboutUs"
+                      android:textSize="@dimen/common_text"
+                      android:text="@string/engaging_tutorials"
+                      />
+                  <com.example.locktrust.widgets.TextView
+                      style="@style/tvContactUs"
+                      android:id="@+id/tvEngagingTutorials"
+                      android:textSize="@dimen/text_small"
+                      android:layout_marginTop="@dimen/margin_ten"
+                      android:text="@string/engaging_tutorials_info"
+                      />
+
+              </LinearLayout>
+
+          </RelativeLayout>
+<!--          live and interactive-->
+          <RelativeLayout
+              style="@style/matchWidth"
+              android:layout_marginTop="@dimen/margin_common">
+              <ImageView
+                  style="@style/imgContactUs"
+                  android:id="@+id/ivLiveAndInterActive"
+                  android:src="@drawable/live_interactive"/>
+              <LinearLayout
+                  style="@style/wrapBoth"
+                  android:layout_toEndOf="@+id/ivLiveAndInterActive"
+                  android:layout_marginStart="@dimen/margin_ten"
+                  android:orientation="vertical">
+                  <com.example.locktrust.widgets.CustomTextViewHeavy
+                      style="@style/tvAboutUs"
+                      android:textSize="@dimen/common_text"
+                      android:text="@string/live_interactive"
+                      />
+                  <com.example.locktrust.widgets.TextView
+                      style="@style/tvContactUs"
+                      android:id="@+id/tvLiveIngterActive"
+                      android:textSize="@dimen/text_small"
+                      android:layout_marginTop="@dimen/margin_ten"
+                      android:text="@string/live_interactive_info"
+                      />
+
+
+              </LinearLayout>
+
+          </RelativeLayout>
+
+      </LinearLayout>
+  </ScrollView>
+
+</RelativeLayout>

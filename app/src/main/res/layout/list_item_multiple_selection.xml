@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   style="@style/matchWidth"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+         style="@style/matchWidth"
+        android:padding="@dimen/margin_small"
+        android:id="@+id/rlMainOption">
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            style="@style/matchWidth"
+            android:id="@+id/tvFilterMainOption"
+            android:layout_toStartOf="@+id/ivFilterMain"
+            android:textSize="@dimen/common_text"
+            tools:text="Subject"
+            android:paddingVertical="@dimen/margin_small"
+            android:textColor="@color/black"
+
+            />
+
+        <ImageView
+           android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivFilterMain"
+            app:srcCompat="@drawable/ic_expand_more"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       style="@style/matchWidth"
+       android:layout_below="@+id/rlMainOption"
+       android:id="@+id/rvFilterSubOption"
+       tools:itemCount="3"
+       tools:visibility="visible"
+       android:visibility="gone"
+       tools:listitem="@layout/list_item_multiple_sub_option_selection"
+      />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/vPopup"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:paddingHorizontal="@dimen/margin_ten"
+       android:layout_below="@+id/rvFilterSubOption"
+        android:background="@color/lightGrey" />
+</RelativeLayout>

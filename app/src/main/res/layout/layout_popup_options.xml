@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_back1"
+    android:layout_margin="@dimen/margin_thirty"
+    android:layout_gravity="center"
+    app:layout_constraintCircleRadius="@dimen/size_twenty">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:layout_margin="@dimen/margin_ten"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:textColor="@color/com_facebook_blue"
+                />
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_alignEnd="@id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONEY"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/margin_five"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_gradient_option_home">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/credit_card"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                style="@style/wrapBoth"
+                android:layout_centerInParent="true"
+                android:text="Credit Cards"
+                android:textStyle="bold"/>
+
+            <ImageView
+               style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_gradient_option_home">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/bank_account"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="Bank Account"/>
+
+            <ImageView
+               style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_gradient_option_home">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/e_voucher"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="E Voucher"/>
+
+            <ImageView
+               style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_five">
+            <TextView
+                android:id="@+id/tvReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECEIVE"
+                android:layout_margin="@dimen/margin_ten"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:textColor="@color/com_facebook_blue"
+                />
+            <TextView
+                android:layout_alignEnd="@id/tvReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONEY"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/margin_five"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <RelativeLayout
+
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bank_card_back">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/wire_more"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="Wire Transfer"/>
+
+            <ImageView
+                style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bank_card_back">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/qr_code"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="QR Code Scanner"/>
+
+            <ImageView
+                style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:layout_marginHorizontal="@dimen/size_twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bank_card_back">
+            <ImageView
+                style="@style/IconLarge"
+                android:src="@drawable/nfc_card"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_alignParentLeft="true"/>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="NFC Transfer"/>
+
+            <ImageView
+                style="@style/IconSmall"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:layout_margin="@dimen/margin_ten"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

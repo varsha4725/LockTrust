@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:id="@+id/nsvCart"
+        android:layout_above="@+id/btnCheckout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llSeriesMainLayout"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCartCourses"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_common"
+                android:layout_marginBottom="@dimen/margin_common"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:orientation="vertical"
+                tools:listitem="@layout/list_item_cart_courses" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+    <Button
+        style="@style/matchWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnCheckout"
+        android:background="@drawable/gradient_background"
+        android:text="@string/checkout"
+        android:textColor="@color/white"
+        />
+    <Button
+        style="@style/matchWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnBuyDemo"
+        android:background="@drawable/gradient_background"
+        android:text="@string/buy_demo"
+        android:textColor="@color/white"
+        />
+</LinearLayout>
+    <include layout="@layout/no_record_found"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

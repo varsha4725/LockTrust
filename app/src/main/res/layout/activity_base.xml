@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.example.locktrust.widgets.CustomDrawer
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/footer"
+                layout="@layout/footer" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            tools:visibility="gone"
+
+
+            tools:context=".activity.MenuActivity">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/menu_background"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlProfile"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_height="wrap_content"
+                         android:padding="@dimen/margin_ten">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivUserProfilePic"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FFF"
+                            android:src="@drawable/man"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ivUserProfilePic"
+                            android:layout_gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/margin_common"
+                            android:orientation="vertical">
+
+                            <com.example.locktrust.widgets.CustomTextViewHeavy
+                                android:id="@+id/tvUserName"
+                                style="@style/tvCommon"
+                                android:textSize="@dimen/text_sixteen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User Name" />
+
+                            <com.example.locktrust.widgets.CustomTextViewMedium
+                                android:id="@+id/tvUserEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_ten"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="view Profile" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/ic_right_arrow"/>
+                    </RelativeLayout>
+                    <View
+                        style="@style/vCommon"
+                        android:layout_margin="@dimen/margin_ten" />
+<!--                    Home-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvHome"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/home" />
+                    </LinearLayout>
+<!--                    My Cources-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvMyCourses"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/my_courses" />
+                    </LinearLayout>
+                    <!--                    MyTututor-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvMyTutor"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/my_tutors" />
+                    </LinearLayout>
+                    <!--  WishList-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvWishList"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/wish_list" />
+                    </LinearLayout>
+
+<!--                        MyCart-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvMyCart"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/my_cart" />
+                    </LinearLayout>
+                    <!--locktrust Credits-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvlocktrustCredits"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/locktrust_credits_title" />
+                    </LinearLayout>
+                    <!--  Help-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvHelp"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/help" />
+                    </LinearLayout>
+                    <!--  FAQ-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvFaq"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/faq" />
+                    </LinearLayout>
+
+<!--                    privacy policy-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvPrivacyPolicy"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/privacy_policy" />
+                    </LinearLayout>
+
+                    <!--  Terms and conditions-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvTermsConditions"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/terms_and_conditions" />
+                    </LinearLayout>
+
+                    <!--  Do's & Don'ts-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvDoesDonts"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/does_and_donts" />
+                    </LinearLayout>
+                    <!--  Despute-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvDespute"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/despute" />
+                    </LinearLayout>
+                    <!--  Pay refund-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvPayRefund"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/pay_refund" />
+                    </LinearLayout>
+                    <!-- Refund payment-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvRefundPayment"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/refund_request" />
+                    </LinearLayout>
+                    <!--  About Us -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvAboutUs"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/about_us" />
+                    </LinearLayout>
+                <!--                    complaint-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvcomplaints"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/complaints" />
+                    </LinearLayout>
+  <!--                    Counseling-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvCounsling"
+                            style="@style/tvSubND"
+                            android:padding="5dp"
+                            android:text="@string/free_counselling" />
+                    </LinearLayout>
+
+
+
+                    <View
+                        style="@style/vCommon"
+                        android:layout_margin="@dimen/margin_ten" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/llLogout"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_small"
+                            android:src="@drawable/ic_logout"/>
+
+                        <com.example.locktrust.widgets.CustomTextViewMedium
+                            android:id="@+id/tvLogOut"
+                            style="@style/tvSubND"
+                            android:layout_gravity="left|center"
+                            android:padding="0dp"
+                            android:layout_marginStart="@dimen/margin_ten"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/log_out" />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+    </com.example.locktrust.widgets.CustomDrawer>
+
+</LinearLayout>

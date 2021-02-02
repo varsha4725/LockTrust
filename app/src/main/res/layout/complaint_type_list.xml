@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.example.locktrust.widgets.TextView
+        android:id="@+id/tvType"
+        style="@style/matchWidth"
+        android:gravity="center"
+        android:padding="@dimen/margin_five"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="@dimen/common_text"
+        android:layout_marginHorizontal="@dimen/size_twenty"
+        android:background="@drawable/background_box" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        style="@style/matchWidth"
+        android:text="@string/terms_condition_title"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/margin_ten"
+        android:id="@+id/tvScreenTitle"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        style="@style/matchBoth"
+        android:id="@+id/rvTermsAndConditions"
+        tools:listitem="@layout/list_item_common"
+        android:layout_below="@+id/tvScreenTitle"/>
+
+    <include layout="@layout/no_record_found"
+        android:visibility="gone" />
+</RelativeLayout>

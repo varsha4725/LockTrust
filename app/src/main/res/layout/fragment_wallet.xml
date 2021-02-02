@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Tools="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchBoth"
+    android:orientation="vertical"
+    >
+
+        <LinearLayout
+            style="@style/matchWidth"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+                android:background="@drawable/credit_background">
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/one_eighty"
+                    android:padding="@dimen/margin_ten"
+                    android:src="@drawable/wallet_background"
+                    android:scaleType="fitXY"
+                    app:riv_corner_radius="20dp"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="clamp"
+                    app:riv_oval="false"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/margin_fifteen"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/margin_common"
+                    android:layout_marginHorizontal="@dimen/margin_thirty"
+                    android:layout_marginTop="-10dp"
+                    >
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        style="@style/BoldText"
+                        android:text="@string/locktrust_credits"
+                        android:textColor="@color/colorWhite"
+                        android:padding="@dimen/margin_small"
+                        android:textSize="@dimen/text_large"
+                        android:layout_margin="@dimen/margin_ten"
+                        />
+                    <com.example.locktrust.widgets.CustomTextViewExtraBold
+                        style="@style/BoldText"
+                        tools:text="150"
+                        android:id="@+id/ivCreditValue"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_Verylarge"
+                        android:layout_marginStart="@dimen/margin_ten"/>
+                    <RelativeLayout
+                        style="@style/matchWidth"
+                        android:layout_margin="@dimen/text_ten"
+                        android:padding="@dimen/margin_small"
+                        android:layout_weight="1">
+                        <com.example.locktrust.widgets.CustomTextViewHeavy
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvUserName"
+                            android:textSize="@dimen/common_text"
+                            android:layout_columnWeight="0.7"
+                            tools:text="User Name"
+                            android:layout_toStartOf="@+id/btnAddCredits"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/colorWhite"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+
+                            android:id="@+id/btnAddCredits"
+                            android:background="@drawable/button_gradient_background_add_credits"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="@dimen/margin_common"
+                            android:paddingVertical="@dimen/margin_ten"
+                            android:text="@string/add_credits"
+                            android:textSize="@dimen/text_small"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorWhite"
+                           />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:tabMode="fixed"
+                android:background="@color/darkBlue"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                tools:layout_editor_absoluteX="8dp" />
+
+        </LinearLayout>
+
+
+<include layout="@layout/no_record_found"
+    android:visibility="gone"/>
+
+
+
+</LinearLayout>

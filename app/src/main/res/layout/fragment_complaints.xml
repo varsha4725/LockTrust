@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="@dimen/size_twenty"
+    tools:context=".Fragments.ComplaintsFragment">
+    <LinearLayout
+        style="@style/matchWidth"
+        android:layout_margin="@dimen/margin_ten">
+        <com.example.locktrust.widgets.TextView
+            android:layout_width="@dimen/sixty_size"
+            android:layout_height="2dp"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/margin_ten"
+            />
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            style="@style/wrapBoth"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/complaints"
+            android:textColor="@color/colorPrimaryDark"/>
+        <com.example.locktrust.widgets.TextView
+            android:layout_width="@dimen/sixty_size"
+            android:layout_height="2dp"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/margin_ten"
+            />
+
+    </LinearLayout>
+
+
+    <com.example.locktrust.widgets.TextView
+      style="@style/EditTextProfile"
+       android:hint="Type"
+        android:editable="false"
+        android:id="@+id/tvComplaintType"
+        android:layout_margin="@dimen/margin_five"
+        android:imeOptions="actionDone"
+        android:focusableInTouchMode="false"
+        app:drawableRightCompat="@drawable/ic_drop_down"
+        android:paddingBottom="@dimen/margin_ten"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+           style="@style/matchWidth"
+            android:id="@+id/rvComplaintType"
+            android:visibility="gone"/>
+
+    <com.example.locktrust.widgets.TextView
+      style="@style/EditTextProfile"
+        android:id="@+id/tvComplaintDesc"
+      android:hint="@string/complaint_desc"
+        android:layout_margin="@dimen/margin_five"
+        android:paddingBottom="@dimen/margin_ten"
+        />
+    <Button
+        android:id="@+id/btnSubmitComplaint"
+        style="@style/btnLogin"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/margin_ten"
+        android:text="Submit"
+        android:layout_marginTop="@dimen/size_twenty"
+        android:textSize="@dimen/text_Vsmall" />
+
+</LinearLayout>

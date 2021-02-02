@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:layout_marginHorizontal="@dimen/margin_fourty"
+    android:id="@+id/llNoRecord"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        style="@style/matchWidth"
+            android:orientation="vertical">
+
+
+
+    <com.example.locktrust.widgets.CustomTextViewHeavy
+        android:id="@+id/tvErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tvCommon"
+        android:textColor="@color/black"
+        android:text="@string/no_record_found"
+        android:layout_marginTop="@dimen/size_one_hundred"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/imgMessage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/margin_common"
+        tools:background="@drawable/no_course_image"
+        android:layout_marginHorizontal="@dimen/size_twenty"
+        android:layout_gravity="center" />
+
+    <com.example.locktrust.widgets.CustomTextViewHeavy
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_sixteen"
+        android:textStyle="bold"
+        android:id="@+id/tvMessageMain"
+        android:gravity="center"/>
+
+    <com.example.locktrust.widgets.TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/common_text"
+        android:id="@+id/tvMessageSub"/>
+    <Button
+        android:id="@+id/btnGoTo"
+        style="@style/btnLogin"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/margin_ten"
+        android:text="@string/browse_courses"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/size_twenty"
+        android:textAllCaps="true"
+        android:textSize="@dimen/common_text" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

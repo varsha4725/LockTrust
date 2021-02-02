@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@mipmap/ic_launcher"
+            android:visibility="gone"/>
+
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/compose_mail"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            />
+            <com.example.locktrust.widgets.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvToSend"
+                tools:text="To :tester"
+                android:hint="@string/message"
+                android:textSize="@dimen/text_large"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary"
+                style="@style/MediumBlackText"/>
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="This is message"
+            android:hint="@string/write_your_message"
+            android:textSize="@dimen/text_large"
+            android:layout_marginHorizontal="16dp"
+            style="@style/MediumBlackText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:layout_marginBottom="@dimen/margin_common"
+            android:gravity="center">
+
+            <com.example.locktrust.widgets.CustomButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/margin_thirty"
+                android:paddingEnd="@dimen/margin_thirty"
+                android:layout_height="30dp"
+                android:paddingHorizontal="@dimen/margin_common"
+                android:background="@drawable/button_gradient_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="No"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+
+
+            <com.example.locktrust.widgets.CustomButton
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/margin_thirty"
+                android:paddingEnd="@dimen/margin_thirty"
+                android:layout_marginStart="@dimen/margin_fifty"
+                android:layout_height="30dp"
+                android:paddingHorizontal="@dimen/margin_common"
+
+                android:background="@drawable/button_gradient_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Yes"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

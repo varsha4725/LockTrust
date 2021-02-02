@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="@style/matchWidth"
+android:layout_marginTop="@dimen/margin_common"
+>
+
+<ImageView
+    android:id="@+id/ivImage"
+    style="@style/imgContactUs"
+    android:padding="@dimen/margin_small"
+    android:src="@drawable/call_us" />
+
+<com.example.locktrust.widgets.TextView
+    android:id="@+id/tvDescription"
+    style="@style/tvContactUs"
+    android:layout_centerInParent="true"
+    android:layout_marginStart="@dimen/margin_ten"
+    android:layout_marginTop="@dimen/margin_ten"
+    android:layout_toEndOf="@+id/ivImage"
+    android:padding="@dimen/margin_small"
+    android:text="@string/call_us_info"
+    android:textSize="@dimen/text_small" />
+
+</RelativeLayout>

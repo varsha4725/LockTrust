@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        style="@style/matchBoth"
+        android:layout_marginStart="@dimen/margin_common"
+        android:layout_marginEnd="@dimen/margin_common"
+        android:scrollbars="none"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            style="@style/matchBoth"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_TitleLogo"
+                style="@style/wrapBoth"
+                android:layout_gravity="center"
+               />
+
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/matchWidth"
+                android:textColor="@color/skybluedark"
+                android:textSize="@dimen/text_small"
+                android:gravity="center"
+                android:text="@string/enrol_now_to_learn_online_from_the_uk_s_best_teachers"/>
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/etFullName"
+                style="@style/edtLogin"
+                android:layout_marginTop="20dp"
+                android:hint="@string/full_name"
+
+                android:inputType="textPersonName" />
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/etEmailId"
+                style="@style/edtLogin"
+                android:layout_marginTop="10dp"
+                android:hint="@string/email_id"
+
+                android:inputType="textEmailAddress" />
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/etPhoneNumber"
+                style="@style/edtLogin"
+                android:layout_marginTop="10dp"
+                android:hint="@string/phone_number"
+
+                android:inputType="number"
+                android:maxLength="13" />
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/etPassword"
+                style="@style/edtLogin"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:hint="@string/enter_your_password"
+
+                android:inputType="textPassword" />
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/etCity"
+                style="@style/edtLogin"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:hint="@string/city"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
+
+            <com.example.locktrust.widgets.CustomCheckBox
+                android:id="@+id/cbEmailDiscount"
+                style="@style/wrapBoth"
+                android:layout_marginTop="@dimen/margin_fifteen"
+                android:checked="false"
+                android:text="@string/i_d_in_for"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/text_small" />
+        <LinearLayout
+                style="@style/matchWidth"
+                >
+            <com.example.locktrust.widgets.CustomCheckBox
+                android:id="@+id/cbTermsCondition"
+                style="@style/wrapBoth"
+                android:text="@string/i_agree_to_terms_and_condition"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/text_small" />
+           <com.example.locktrust.widgets.TextView
+             android:id="@+id/tvTermsConditionSignup"
+                style="@style/wrapBoth"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/colorSecondary"
+                android:textStyle="bold"
+               android:textSize="@dimen/text_small"
+               android:gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/margin_five"
+               />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/matchWidth">
+
+            <com.example.locktrust.widgets.CustomCheckBox
+                android:id="@+id/cbPrivacyPolicy"
+                style="@style/wrapBoth"
+                android:text="@string/i_agree_to_privacy_policy"
+                android:textColor="@color/darkgrey"
+                android:textSize="@dimen/text_small" />
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvPrivacyPolicySignup"
+                    style="@style/wrapBoth"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/margin_five"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_small"
+                    />
+            </LinearLayout>
+
+            <com.example.locktrust.widgets.CustomButton
+                android:id="@+id/btnLogin"
+                style="@style/btnLogin"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_common"
+                android:text="@string/sign_up" />
+
+            <LinearLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_common"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.example.locktrust.widgets.TextView
+
+                    style="@style/wrapBoth"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="@dimen/text_small" />
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvSignUp"
+                    style="@style/wrapBoth"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

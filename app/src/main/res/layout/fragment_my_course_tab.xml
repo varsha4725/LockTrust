@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/srlCourses">
+            <androidx.core.widget.NestedScrollView
+                style="@style/matchBoth"
+                android:id="@+id/nsvAllCourses"
+
+                android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llSeriesMainLayout"
+
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllCourses"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:orientation="vertical"
+                tools:listitem="@layout/list_item_all_courses" />
+
+        </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/no_record_found"
+        android:visibility="gone"/>
+</RelativeLayout>

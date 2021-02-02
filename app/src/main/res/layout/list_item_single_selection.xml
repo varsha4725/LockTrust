@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        >
+
+        <com.example.locktrust.widgets.CustomCheckBox
+            android:id="@+id/cbSelection"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:button="@drawable/radio_button_selector_entry"
+            android:padding="@dimen/margin_ten"
+            android:textColor="@color/colorWhite" />
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:id="@+id/tvItemName"
+            style="@style/LargeBlackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_toEndOf="@+id/cbSelection"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorBlack"
+
+            tools:text="Smith S." />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:id="@+id/vPopup"
+        android:layout_below="@+id/llTitle"
+        android:background="@color/lightGrey" />
+</RelativeLayout>

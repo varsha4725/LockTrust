@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchBoth"
+    android:id="@+id/llMeeting"
+    android:gravity="center"
+    tools:visibility="visible"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="295dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_common"
+        android:padding="@dimen/margin_fourty"
+        android:src="@drawable/interactive_live_tutrorial" />
+
+
+
+        <com.example.locktrust.widgets.TextView
+            style="@style/wrapBoth"
+            android:text="@string/No_schedule_cources"
+            android:textSize="@dimen/common_text"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_ten" />
+
+        <com.example.locktrust.widgets.CustomButton
+            style="@style/btnLogin"
+            android:text="@string/schedule_now"
+            android:id="@+id/btnUnScheduleNow"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_fourty" />
+
+    </LinearLayout>
+
+
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragments.InvoiceFragment"
+    android:padding="@dimen/text_ten">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <com.example.locktrust.widgets.CustomTextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invoice Management"
+        android:textSize="@dimen/text_large"
+        android:layout_margin="@dimen/margin_ten"
+        android:drawableLeft="@drawable/arrow_back_black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInvoiceType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_ten"
+        android:layout_marginStart="150dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey">
+
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/margin_five"
+            android:text="INVOICE ITEM" />
+        <com.example.locktrust.widgets.CustomButton
+            android:id="@+id/btnGnerateInvoiice"
+            android:padding="@dimen/margin_ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/button_gradient_background_less_rounded"
+            android:text="CREATE INVOICE" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInvoiceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnGnerateInvoiice"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="@dimen/text_ten"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_back1"
+            android:padding="@dimen/size_twenty"/>
+        <org.eazegraph.lib.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_weight="1"
+            android:padding="6dp"
+            app:layout_constraintTop_toBottomOf="@id/rvInvoiceList"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

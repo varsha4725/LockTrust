@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="@dimen/margin_fifteen">
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/llCourse"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageSubject"
+                android:layout_width="@dimen/home_subject_card_size"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/home_subject_card_size"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/margin_small"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/methamatics"
+                />
+
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/tvSubject"
+                style="@style/wrapBoth"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/common_text"
+                tools:text="Mathematics subject for testing "
+                android:paddingStart="@dimen/margin_small"
+                android:paddingEnd="@dimen/margin_small"
+                android:maxLines="4"
+                android:minLines="4"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/margin_ten"
+                android:textAllCaps="false"
+                android:textColor="@color/darkBlue"
+                />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

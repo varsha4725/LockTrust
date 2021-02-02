@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.FreeCounselingFragment">
+    <!--          Free Counseling  form-->
+   <!-- <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/margin_small"
+        >-->
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="@dimen/margin_layout_common"
+            android:layout_marginEnd="@dimen/margin_layout_common"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                style="@style/matchWidth"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_common"
+
+                >
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:id="@+id/vFirst"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorPrimaryDark"/>
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/wrapBoth"
+                    android:textSize="@dimen/common_text"
+                    android:text="@string/free_counselling"
+                    android:id="@+id/tvTitleContactUs"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/vFirst"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:id="@+id/vSecond"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_toEndOf="@id/tvTitleContactUs"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorPrimaryDark"/>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/matchWidth">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/etContactUs"
+                    android:id="@+id/etFullName"
+                    android:hint="@string/full_name"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM "
+                    android:maxLines="1"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/etContactUs"
+                    android:id="@+id/etEmailId"
+                    android:hint="@string/email_id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/etContactUs"
+                    android:id="@+id/etPhoneNo"
+                    android:hint="@string/phone_no"
+                    android:maxLength="13"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/matchWidth">
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/etState"
+                    style="@style/etContactUs"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/select_your_state"
+                    android:imeOptions="actionDone"
+                    app:drawableRightCompat="@drawable/ic_drop_down"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/etContactUs"
+                    android:id="@+id/etCity"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/select_your_city"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    app:drawableRightCompat="@drawable/ic_drop_down"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/etContactUs"
+                    android:id="@+id/etHelp"
+                    android:hint="@string/how_help"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.example.locktrust.widgets.CustomButton
+                style="@style/btnContactUs"
+                android:layout_width="120dp"
+                android:id="@+id/bntSendMessage"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginBottom="@dimen/margin_common"
+                android:text="@string/send_message"/>
+
+        </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+ <!--  </androidx.cardview.widget.CardView>-->
+</LinearLayout>

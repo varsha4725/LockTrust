@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_small">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_toLeftOf="@+id/etAmountCourse"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content">
+            <com.example.locktrust.widgets.TextView
+                style="@style/wrapBoth"
+                android:id="@+id/tvPaymentSubject"
+                android:textSize="@dimen/text_small"
+                tools:text="This is testing name for test the how much we adhkjhkahdada"
+                android:textColor="@color/darkBlue"
+                />
+
+        </LinearLayout>
+
+        <com.example.locktrust.widgets.TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:id="@+id/etAmountCourse"
+            tools:text="2345"
+            android:gravity="end"
+            android:layout_gravity="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/text_small"
+            />
+    </LinearLayout>
+
+</LinearLayout>

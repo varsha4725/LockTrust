@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_margin="@dimen/margin_ten"
+        android:layout_height="180dp"
+        android:padding="@dimen/size_twenty"
+        android:background="@drawable/button_gradient_background_less_rounded">
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:id="@+id/tvtotalBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:text="Total Balance"/>
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:id="@+id/tvBalanceValue"
+            android:layout_below="@+id/tvtotalBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:text="234567"
+
+            android:layout_marginBottom="@dimen/margin_ten"
+            />
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvCardNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBalanceValue"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/size_twenty"
+            android:textColor="@color/white"
+            android:text=". . . .  . . . .  . . . . 3456"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCardNo">
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvHolderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smaple Name"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_fourty"/>
+
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01/24"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_fourty"/>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

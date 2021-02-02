@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment"
+    >
+    <androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:scrollbars="none"
+        android:layout_above="@+id/llBottomLayout">
+        <LinearLayout
+            style="@style/matchBoth"
+            android:id="@+id/layoutBaseHome"
+            android:background="@color/light_grey"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/matchBoth"
+                android:background="@drawable/downside_curve_background"
+                android:orientation="vertical"
+                >
+
+                <com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    tools:text="Class 11th"
+                    android:id="@+id/tvClassShow"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_common"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+                    />
+
+                <com.example.locktrust.widgets.CustomTextViewExtraBold
+                    style="@style/wrapBoth"
+                    tools:text="Statics and Probability"
+                    android:id="@+id/tvSubjectName"
+                    android:layout_marginStart="@dimen/margin_common"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textSize="@dimen/text_Verylarge"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginStart="@dimen/margin_common"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/margin_common"
+                        android:layout_height="@dimen/margin_common"
+                        app:srcCompat="@drawable/ic_hourglass"/>
+                    <com.example.locktrust.widgets.TextView
+                        style="@style/wrapBoth"
+                        android:text="@string/duration_lable"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        />
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        style="@style/wrapBoth"
+                        tools:text="1 hour 30 Mins"
+                        android:id="@+id/tvDuration"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_common">
+
+                    <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvCoursesDiscountAmount"
+                    style="@style/wrapBoth"
+                    android:textColor="@color/light_grey"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textSize="@dimen/text_small"
+                    tools:text="Rs 52000"/>
+
+                    <com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    tools:text="Rs 52000"
+                    android:id="@+id/tvCoursePrice"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginStart="25dp"
+                    android:textColor="@color/skybluedark"
+                    android:textSize="@dimen/text_large"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin_common">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/wrapBoth"
+                    android:text="@string/about_this_course"
+                    android:layout_marginTop="@dimen/margin_common"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text"
+                    />
+                <com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    android:id="@+id/tvAboutCourse"
+                    tools:text="locktrust brings you an intellectule fusion of the
+                     British and Indian educational Sysytem to maximise your success
+                     in  your Maths class 10th exam"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_small"
+                    />
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/wrapBoth"
+                    android:text="@string/course_features"
+                    android:layout_marginTop="@dimen/margin_common"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:id="@+id/rvFeaturedCourses"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/list_item_feature_courses"/>
+                <!--<com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    android:id="@+id/tvCourseFeature"
+                    tools:text="locktrust brings you an intellectule fusion of the
+                     British and Indian educational Sysytem to maximise your success
+                     in  your Maths class 10th exam"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_small"
+                    />-->
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/llBottomLayout"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <com.example.locktrust.widgets.TextView
+           style="@style/tvBottomCourseDetails"
+            android:id="@+id/btnAddCart"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_background"/>
+        <com.example.locktrust.widgets.TextView
+            style="@style/tvBottomCourseDetails"
+            android:id="@+id/btnEnQuireNow"
+            android:text="@string/enquire_now"
+            android:background="@drawable/button_back_blue_border"
+            android:textColor="@color/backColor"/>
+    </LinearLayout>
+
+</RelativeLayout>

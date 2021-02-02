@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_marginStart="@dimen/margin_layout_common"
+    android:layout_marginEnd="@dimen/margin_layout_common">
+    <!--<com.example.locktrust.widgets.TextView
+        style="@style/wrapBoth"
+        android:text="@string/skip"
+        android:padding="@dimen/margin_common"
+        android:id="@+id/tvSkipScreenFirst"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/darkgrey"
+        android:textSize="@dimen/common_text"
+        />-->
+    <LinearLayout
+       style="@style/matchWidth"
+
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/welcome_screen_image_size"
+            android:layout_height="@dimen/welcome_screen_image_size"
+            android:src="@drawable/welcome_three"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
+        <com.example.locktrust.widgets.CustomTextViewExtraBold
+            style="@style/wrapBoth"
+            android:text="@string/interactive_live_tutorials"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_Verylarge"/>
+        <com.example.locktrust.widgets.TextView
+            style="@style/wrapBoth"
+            android:text="@string/welcome_screen_three_desc"
+            android:gravity="center"
+            android:textColor="@color/darkgrey"
+            android:layout_marginStart="@dimen/margin_ten"
+            android:layout_marginEnd="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_common"
+            android:layout_gravity="center"
+            android:textSize="@dimen/common_text"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_common"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/margin_eight"
+                android:layout_height="@dimen/margin_eight"
+
+                android:background="@drawable/circle_welcome"
+
+                />
+            <TextView
+                android:layout_width="@dimen/margin_eight"
+                android:layout_height="@dimen/margin_eight"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:background="@drawable/circle_welcome"
+
+                />
+            <TextView
+                android:layout_width="@dimen/margin_common"
+                android:layout_height="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:background="@drawable/capsule_welcome"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

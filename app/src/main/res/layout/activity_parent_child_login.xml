@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ScrollView
+        style="@style/matchBoth"
+        android:layout_marginStart="@dimen/margin_common"
+        android:layout_marginEnd="@dimen/margin_common"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            style="@style/matchWidth"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <ImageView
+               style="@style/DashboardHeadImage"
+                android:layout_marginTop="@dimen/margin_common"
+                android:src="@drawable/login_parent_child_imge"/>
+
+            <Button
+                android:id="@+id/btnLoginAsParent"
+                style="@style/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/margin_fifty"
+                android:layout_marginStart="@dimen/margin_fifty"
+                android:text="@string/login_as_parent"
+                android:layout_marginTop="@dimen/_40Cdp"
+                />
+            <Button
+                android:id="@+id/btnLoginAsChild"
+                style="@style/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/margin_fifty"
+                android:layout_marginStart="@dimen/margin_fifty"
+                android:text="@string/login_as_student"
+                android:layout_marginBottom="@dimen/_40Cdp"
+                android:layout_marginTop="@dimen/margin_common"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

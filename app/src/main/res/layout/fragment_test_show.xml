@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llMessage"
+            android:layout_above="@+id/btnDownload"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkBlue"
+                android:padding="@dimen/margin_ten"
+                android:text="@string/message"
+                android:textSize="@dimen/common_text"
+                />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                >
+            <com.example.locktrust.widgets.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/tvMessage"
+                tools:text="This is list testing message"
+                android:padding="@dimen/margin_ten"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text"
+                />
+            </ScrollView>
+           <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/srlPdf"
+
+                >-->
+            <WebView
+                android:id="@+id/wvInvoice"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"/>
+            <!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+        </LinearLayout>
+
+    <com.example.locktrust.widgets.CustomTextViewHeavy
+        android:id="@+id/btnDownload"
+        style="@style/tvBottomCourseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_common"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_background"
+        android:text="@string/download"
+        android:textColor="@color/white" />
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        />-->
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cvCourseList">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_common"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_common"
+        android:layout_marginVertical="@dimen/margin_small"
+        app:cardCornerRadius="@dimen/margin_fifteen">
+
+        <LinearLayout
+            style="@style/matchWidth"
+            android:orientation="horizontal"
+            >
+          <!-- All Course Image-->
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageAllCourse"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    tools:src="@drawable/studying1"
+                    app:riv_corner_radius="15dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false"
+                    tools:ignore="MissingConstraints" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:layout_marginStart="@dimen/margin_small"
+               >
+                <!-- All Courses Subject Name-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:id="@+id/rlTopTitle"
+                   >
+                    <com.example.locktrust.widgets.TextView
+                        android:id="@+id/tvGradeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_featured_label_background"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/margin_three"
+                        android:paddingBottom="@dimen/margin_three"
+                        android:paddingStart="@dimen/margin_common"
+                        android:paddingEnd="@dimen/margin_common"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/white"
+                        tools:text="name"
+                       />
+                    <ImageView
+                        android:layout_width="@dimen/social_icon_size"
+                        android:layout_height="@dimen/social_icon_size"
+                        android:padding="@dimen/margin_small"
+                        android:visibility="invisible"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/fev_not_selected"
+                        />
+                </RelativeLayout>
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:id="@+id/tvSubjectTitle"
+                    style="@style/wrapBoth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTopTitle"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_marginEnd="@dimen/common_text"
+                    android:textColor="@color/backgroundblue"
+                    android:textSize="@dimen/common_text"
+                    tools:text="topic name to be tested for this is testng daat  " />
+
+                <View
+                    android:id="@+id/tv_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvSubjectTitle"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_fifty"
+
+                    android:background="@color/darkgrey"
+                    />
+                <!-- All Courses Subject Titlein detail-->
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/tv_line1"
+                 android:layout_alignParentBottom="true"
+                 android:orientation="vertical">
+                 <LinearLayout
+                     style="@style/matchWidth"
+                     android:orientation="horizontal"
+
+                     >
+                     <ImageView
+                         android:id="@+id/image_count"
+                         style="@style/IconSmall"
+                         android:paddingStart="0dp"
+                         app:srcCompat="@drawable/ic_hourglass"
+                         />
+                     <com.example.locktrust.widgets.TextView
+                         android:id="@+id/tvNumberOfTutorials"
+                         style="@style/wrapBoth"
+                         android:layout_marginStart="@dimen/margin_small"
+                         android:layout_gravity="center_vertical"
+                         android:textSize="@dimen/text_small"
+                         android:text="No of Tutorial"
+                         />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     style="@style/matchWidth"
+                     android:orientation="horizontal"
+
+                     >
+                     <ImageView
+                         style="@style/IconSmall"
+                         android:paddingStart="0dp"
+                         app:srcCompat="@drawable/ic_time"
+                         />
+                     <com.example.locktrust.widgets.TextView
+                         android:id="@+id/tvCoursesDuration"
+                         style="@style/wrapBoth"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginStart="@dimen/margin_small"
+                         android:textSize="@dimen/text_small"
+                         android:text="Time Per Chapter"
+                         />
+                 </LinearLayout>
+                 <com.example.locktrust.widgets.TextView
+                     android:id="@+id/tvTutorialRemaining"
+                     style="@style/wrapBoth"
+                     tools:text="2 out of 5 tutorial schedule"
+                     android:layout_marginLeft="@dimen/margin_small"
+                     android:layout_marginTop="@dimen/margin_small"
+                     android:layout_gravity="center_vertical"
+                     android:textSize="@dimen/text_small"
+                     android:textColor="@color/backgroundblue"
+                     />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llEnrolAssign"
+                    android:layout_marginVertical="@dimen/margin_ten"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnSchedule"
+                        style="@style/btnContactUs"
+                       android:layout_weight="1"
+                        android:layout_marginHorizontal="@dimen/margin_small"
+                        android:text="@string/enrol"
+                        android:textSize="@dimen/text_Vsmall" />
+                    <Button
+                        android:id="@+id/btnAssignChild"
+                        style="@style/btnContactUs"
+                        android:visibility="gone"
+                       android:layout_weight="1"
+                       android:layout_marginHorizontal="@dimen/margin_small"
+                        android:text="@string/assign_child"
+                        android:textSize="@dimen/text_Vsmall" />
+                </LinearLayout>
+                 <com.example.locktrust.widgets.CustomTextViewExtraBold
+                     android:id="@+id/tvAssignUserName"
+                     style="@style/wrapBoth"
+                     android:visibility="gone"
+                     tools:text="2 out of 5 tutorial schedule"
+                     android:layout_marginLeft="@dimen/margin_small"
+                     android:layout_marginTop="@dimen/margin_small"
+                     android:layout_gravity="center_vertical"
+                     android:textSize="@dimen/text_small"
+                     android:textColor="@color/backgroundblue"
+                     />
+             </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_right_arrow"
+        android:layout_marginEnd="@dimen/margin_ten"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_gravity="end|center_vertical"
+        android:background="@drawable/circle_theme"
+        />
+</FrameLayout>

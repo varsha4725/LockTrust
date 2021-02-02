@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@drawable/toolbar"
+    android:minHeight="@dimen/toolbar_height"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <com.example.locktrust.widgets.CustomTextViewMedium
+        android:id="@+id/menu_name"
+        style="@style/SemiWhiteText"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+
+        android:textSize="@dimen/text_large"
+        />
+    <ImageView
+        android:layout_width="20dp"
+        android:id="@+id/ivMenu"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_height="20dp"
+        android:background="@drawable/ic_baseline_more_vert_24"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/ivNotification"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/flCart"
+                android:layout_marginEnd="@dimen/margin_ten"
+                android:visibility="gone"
+                android:background="@drawable/lt_logo"/>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flCart"
+
+                android:layout_alignParentEnd="true">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivCart"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:background="@drawable/lt_logo"/>
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:textSize="@dimen/text_footer"
+                    android:id="@+id/tvCartItemCount"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:visibility="gone"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/circle_red"
+                    tools:text="80"
+                    android:textColor="@color/white"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flDownload"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivShare"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:background="@drawable/ic_baseline_share_24"/>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

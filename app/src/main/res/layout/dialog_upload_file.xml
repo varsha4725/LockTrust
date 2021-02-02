@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@mipmap/ic_launcher"
+            android:visibility="gone"/>
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/upload_test"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/darkBlue"
+            android:textStyle="bold"
+            />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/etMessage"
+            style="@style/MediumBlackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:hint="@string/test_title"
+            android:textSize="@dimen/text_large"
+            tools:text="This is message" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:id="@+id/flFileChose"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_theme"
+                android:layout_centerInParent="true"
+                android:elevation="5dp"
+                android:padding="@dimen/margin_small"
+                android:layout_centerHorizontal="true"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_file"/>
+            </FrameLayout>
+        <!--<com.example.locktrust.widgets.CustomButton
+            android:id="@+id/btnUploadFile"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="@dimen/margin_common"
+            android:background="@drawable/button_gradient_background_less_rounded"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_common"
+            android:text="@string/choose_file"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="14sp"/>-->
+            <com.example.locktrust.widgets.TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tvFileName"
+              android:text="@string/no_file_chosen"
+              android:hint="@string/message"
+              android:textSize="@dimen/text_large"
+              android:layout_gravity="center_vertical"
+              android:layout_marginStart="@dimen/margin_ten"
+              android:textColor="@color/black"
+              style="@style/MediumBlackText"/>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_common"
+            android:layout_marginHorizontal="@dimen/margin_common"
+            android:layout_marginBottom="@dimen/margin_common"
+            >
+
+            <com.example.locktrust.widgets.CustomButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/margin_thirty"
+                android:paddingEnd="@dimen/margin_thirty"
+                android:layout_height="30dp"
+                android:paddingHorizontal="@dimen/margin_common"
+                android:background="@drawable/button_gradient_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="start"
+                android:text="No"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+
+
+            <com.example.locktrust.widgets.CustomButton
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/margin_thirty"
+                android:paddingEnd="@dimen/margin_thirty"
+                android:layout_marginStart="@dimen/margin_fifty"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:paddingHorizontal="@dimen/margin_common"
+                android:background="@drawable/button_gradient_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="upload file"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+

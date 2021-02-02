@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_background_color"
+    android:id="@+id/layout_tutorDetail">
+    <!--<Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"></Button>-->
+    <androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:scrollbars="none"
+        android:layout_above="@+id/btnBookSession">
+        <LinearLayout
+           style="@style/matchWidth"
+            android:layout_margin="@dimen/margin_thirty"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/size_one_hundred">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civTutorImage"
+                android:layout_width="@dimen/size_ninety"
+                android:layout_height="@dimen/size_ninety"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="@dimen/margin_ten"
+                android:src="@drawable/ic_user_default" />
+
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+               style="@style/wrapBoth"
+                android:id="@+id/tvTutorName"
+                tools:text="Fuzia Khaimani Naaz"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_common"
+                android:textSize="@dimen/common_text"
+                android:textColor="@color/darkBlue"
+                />
+            <com.example.locktrust.widgets.TextView
+                style="@style/wrapBoth"
+                android:id="@+id/tvEmailId"
+                tools:text="fjadjfo@gmail.com"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_gravity="center"
+                android:textColor="@color/darkBlue"
+                android:gravity="center"
+                />
+            <com.example.locktrust.widgets.TextView
+                style="@style/matchWidth"
+                android:id="@+id/tvTutorDegree"
+                tools:text="BA(Hons) Visual Communication,BA (Hons) cultural studies,Contemporary History"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:gravity="center"
+                />
+            <RatingBar
+                android:id="@+id/rbTutor"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar"
+                tools:rating="3.5" />
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/wrapBoth"
+                android:text="@string/about_me"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text"
+                android:layout_marginTop="@dimen/margin_common"
+                />
+            <com.example.locktrust.widgets.TextView
+                style="@style/wrapBoth"
+                android:id="@+id/tvTutorAboutMe"
+                android:layout_marginTop="@dimen/margin_ten"
+                tools:text="I have three degrees Cultural Studies (BA,1990-93)"/>
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/wrapBoth"
+                android:text="@string/subjects_taught"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text"
+                android:layout_marginTop="@dimen/margin_common"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_ten"
+                tools:listitem="@layout/list_item_tutor_detail_list"
+
+                android:id="@+id/rvSubjectsTaught"/>
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/wrapBoth"
+                android:text="@string/grades_taught"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text"
+                android:layout_marginTop="@dimen/margin_common"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:id="@+id/rvGradesTaught"/>
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/wrapBoth"
+                android:text="@string/boards_handled"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text"
+                android:layout_marginTop="@dimen/margin_common"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:id="@+id/rvBoardHandled"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--<Button
+        style="@style/matchWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBookSession"
+        android:background="@drawable/gradient_background"
+        android:text="@string/book_session"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>-->
+    <include layout="@layout/no_record_found"
+        android:visibility="gone"/>
+</RelativeLayout>

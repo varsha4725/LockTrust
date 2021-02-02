@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="16dp"
+    android:layout_marginBottom="@dimen/margin_fifty"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/margin_ten"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sort_filter_background">
+
+        <RadioGroup
+            style="@style/wrapBoth"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_fifty"
+            >
+            <RadioButton
+                style="@style/sort_filter_text"
+                android:text="@string/price_low_to_high" />
+            <RadioButton
+                style="@style/sort_filter_text"
+                android:text="@string/price_high_to_low" />
+            <RadioButton
+                style="@style/sort_filter_text"
+                android:text="@string/a_to_z" />
+            <RadioButton
+                style="@style/sort_filter_text"
+                android:text="@string/z_to_a"
+                android:layout_marginBottom="@dimen/margin_fifty"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

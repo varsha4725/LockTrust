@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="This is message"
+            android:textSize="@dimen/text_large"
+            android:padding="16dp"
+            style="@style/MediumBlackText" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_common"
+        android:gravity="center">
+
+        <com.example.locktrust.widgets.CustomButton
+            android:id="@+id/btnNo"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/margin_thirty"
+            android:paddingEnd="@dimen/margin_thirty"
+            android:layout_height="30dp"
+            android:paddingHorizontal="@dimen/margin_common"
+            android:background="@drawable/button_gradient_background"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="No"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+
+
+        <com.example.locktrust.widgets.CustomButton
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/margin_thirty"
+            android:paddingEnd="@dimen/margin_thirty"
+            android:layout_marginStart="@dimen/margin_fifty"
+            android:layout_height="30dp"
+            android:paddingHorizontal="@dimen/margin_common"
+
+            android:background="@drawable/button_gradient_background"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Yes"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>

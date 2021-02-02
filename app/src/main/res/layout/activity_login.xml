@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayoutBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <FrameLayout
+        android:id="@+id/flImsge"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_gradient_background" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/login_image"
+                android:scaleType="centerCrop"
+                />
+            <com.example.locktrust.widgets.CustomTextViewMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_register"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/text_large"
+                android:layout_margin="@dimen/margin_ten"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below="@id/flImsge"
+        android:id="@+id/lyOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/sixty_size"
+        android:layout_marginTop="@dimen/minus_margin_twenty"
+        android:background="@drawable/button_gradient_background_add_credits"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:id="@+id/tvOptionLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_thirty"
+            android:layout_margin="@dimen/margin_five"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:background="@drawable/button_back1"
+            android:text="@string/sign_in"
+            android:textSize="@dimen/text_large" />
+
+        <com.example.locktrust.widgets.CustomTextViewMedium
+            android:id="@+id/tvOptionSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_thirty"
+            android:layout_margin="@dimen/margin_five"
+            android:layout_weight="5"
+            android:text="@string/sign_up"
+            android:textSize="@dimen/text_large"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_below="@id/lyOptions"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/hello_user_image"
+        android:layout_margin="@dimen/size_twenty"
+        android:id="@+id/ivhelloImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/ScrollLogin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:layout_below="@+id/ivhelloImage">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="Email"
+               android:textSize="@dimen/common_text" />
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etUserEmail"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textEmailAddress"
+               android:layout_marginHorizontal="@dimen/common_text" />
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/password"
+               android:textSize="@dimen/common_text" />
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty" >
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+               <com.example.locktrust.widgets.CustomTextViewMedium
+                   android:id="@+id/tvView"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="view"
+                   android:layout_alignParentEnd="true"
+                   android:textColor="@color/com_facebook_blue"
+                   />
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etPassword"
+               android:textSize="@dimen/common_text"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPassword"
+             />
+               </RelativeLayout>
+
+           </FrameLayout>
+           <com.example.locktrust.widgets.CustomTextViewExtraBold
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/forget_password"
+               android:layout_marginVertical="@dimen/margin_five"
+               android:textColor="@color/skybluedark"
+               android:textSize="@dimen/text_Vsmall"
+               />
+
+           <com.example.locktrust.widgets.CustomButton
+               android:id="@+id/btnLoginSystem"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/margin_fourty"
+               android:background="@drawable/button_gradient_background_less_rounded"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="Login"
+               android:textSize="@dimen/text_large"
+               android:layout_marginVertical="@dimen/margin_five"
+               android:textColor="@color/white">
+
+           </com.example.locktrust.widgets.CustomButton>
+
+       </LinearLayout>
+   </androidx.core.widget.NestedScrollView>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollSignIn"
+        android:layout_below="@+id/ivhelloImage"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:visibility="gone">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/name"
+               android:textSize="@dimen/common_text" />
+
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etNameSignup"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="text"
+               android:textSize="@dimen/common_text"
+               android:layout_marginHorizontal="@dimen/size_twenty" />
+
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:textSize="@dimen/common_text"
+               android:text="Email" />
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etmailIdSignUp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/common_text"
+               android:inputType="textEmailAddress"
+               android:layout_marginHorizontal="@dimen/size_twenty" />
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/password"
+               android:textSize="@dimen/common_text" />
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty" >
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+               <com.example.locktrust.widgets.CustomEditTextMedium
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/text_Vsmall"
+                   android:text="view"
+                   android:layout_alignParentEnd="true"
+                   android:textColor="@color/com_facebook_blue"
+                   />
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etPasswordSignUp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPassword"
+               android:textSize="@dimen/text_Vsmall"
+             />
+               </RelativeLayout>
+
+           </FrameLayout>
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/password_again"
+               android:layout_marginVertical="@dimen/margin_five"
+               />
+
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etpasswodAgainSignUp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPassword"
+               android:layout_marginHorizontal="@dimen/size_twenty" />
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/mobile_no"
+               android:layout_marginVertical="@dimen/margin_five"
+               android:textSize="@dimen/common_text" />
+           <com.example.locktrust.widgets.CustomEditTextMedium
+               android:id="@+id/etMobleSignUp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="number"
+               android:maxLength="10"
+               android:textSize="@dimen/common_text"
+               android:layout_marginHorizontal="@dimen/size_twenty" />
+
+
+           <com.example.locktrust.widgets.CustomTextViewMedium
+               android:id="@+id/tvAlreadyUser"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="Already Register?"
+               android:textColor="@color/skybluedark"
+               android:textSize="@dimen/text_Vsmall"
+               />
+
+           <com.example.locktrust.widgets.CustomButton
+               android:id="@+id/btnSignUp"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/margin_fourty"
+               android:background="@drawable/button_gradient_background_less_rounded"
+               android:layout_marginHorizontal="@dimen/size_twenty"
+               android:text="@string/sign_in"
+               android:textSize="@dimen/text_large"
+               android:layout_marginVertical="@dimen/margin_five"
+               android:textColor="@color/white">
+
+           </com.example.locktrust.widgets.CustomButton>
+
+       </LinearLayout>
+   </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    android:layout_margin="@dimen/margin_small"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:id="@+id/nsvCart"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/matchWidth"
+            android:orientation="vertical">
+
+            <com.example.locktrust.widgets.TextView
+                style="@style/TextViewProfile"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:text="@string/available_special_discount" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/margin_small">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:layout_marginHorizontal="@dimen/margin_common"
+                    >
+                    <com.example.locktrust.widgets.TextView
+                        android:id="@+id/etApplycoupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_thirty"
+                        android:layout_toLeftOf="@+id/btnApplyCoupon"
+                        android:background="@drawable/frame_right_edge"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/common_text"
+                        android:hint="@string/apply_coupon_code"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textColorHint="#80000000"
+                        />
+
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        android:id="@+id/btnApplyCoupon"
+                        android:layout_height="@dimen/margin_thirty"
+                        android:layout_width="80dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/button_left_edge"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/apply"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_text" />
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/matchWidth"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:orientation="horizontal">
+                <com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    android:padding="@dimen/margin_ten"
+                    android:text="ORDER DETAILS"/>
+                <com.example.locktrust.widgets.TextView
+                    style="@style/wrapBoth"
+                    android:id="@+id/tvTotalItems"
+                    android:text="(4 items)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/matchWidth"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCart"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/list_item_payment_course"
+                    style="@style/matchWidth"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small">
+
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                       android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/text_small"
+                        android:text="@string/cart_total" />
+
+
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        android:id="@+id/tvCartTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        tools:text="2345"
+                        android:gravity="end"
+                        android:textColor="@color/design_default_color_error"
+                        android:textSize="@dimen/text_small" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/llCouponDiscount"
+                    tools:visibility="visible"
+                    android:visibility="gone"
+                    android:background="@color/white"
+                    android:padding="@dimen/margin_small">
+
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        style="@style/wrapBoth"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/text_small"
+                        android:text="@string/coupon_discount" />
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        android:id="@+id/tvCouponDiscount"
+                        style="@style/wrapBoth"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        tools:text="2345"
+                        android:textColor="@color/design_default_color_error"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/colorGray"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_small">
+
+                    <com.example.locktrust.widgets.CustomTextViewExtraBold
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/common_text"
+                        android:textColor="@color/darkBlue"
+                        android:text="@string/total_amount" />
+
+                    <com.example.locktrust.widgets.CustomTextViewExtraBold
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        android:text="2345"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/common_text" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include
+        layout="@layout/no_record_found"
+        android:visibility="gone"
+        />
+
+    <Button
+        style="@style/matchWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConfirmPayment"
+        android:background="@drawable/gradient_background"
+        android:text="CONFIRM PAYMENT"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

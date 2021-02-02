@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/margin_ten">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/rvCardList"
+            />
+
+        <LinearLayout
+            android:layout_below="@id/flImsge"
+            android:id="@+id/lyOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/sixty_size"
+            android:background="@drawable/button_gradient_option_home"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.example.locktrust.widgets.CustomTextViewMedium
+                android:id="@+id/tvOptionWallet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_thirty"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:background="@drawable/button_back1"
+                android:text="@string/locktrust_wallet"
+                android:textSize="@dimen/text_ten" />
+
+            <com.example.locktrust.widgets.CustomTextViewMedium
+                android:id="@+id/tvOptionGateway"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_thirty"
+                android:layout_margin="@dimen/margin_five"
+                android:layout_weight="5"
+                android:text="@string/payment_gateway"
+                android:textSize="@dimen/text_ten"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banking"
+                android:layout_marginTop="@dimen/margin_ten"
+                />
+          <com.wajahatkarim3.easyflipview.EasyFlipView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:flipOnTouch="true"
+              app:flipEnabled="true"
+              app:flipDuration="400"
+              app:flipType="vertical"
+              app:flipFrom="front"
+              app:autoFlipBack="true">
+            <androidx.recyclerview.widget.RecyclerView
+                android:foregroundGravity="center"
+                android:id="@+id/rvBankList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+                android:layout_gravity="center"
+                android:elevation="@dimen/margin_five"
+                android:background="@drawable/button_back1"
+                android:layout_margin="@dimen/margin_five"
+                tools:listitem="@layout/layout_banking_list"/>
+              <androidx.recyclerview.widget.RecyclerView
+                android:foregroundGravity="center"
+                android:id="@+id/rvBankList1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+                android:layout_gravity="center"
+                android:elevation="@dimen/margin_five"
+                android:background="@drawable/button_back1"
+                android:layout_margin="@dimen/margin_five"
+                tools:listitem="@layout/layout_banking_list"/>
+          </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bill Paayments"
+                android:layout_marginTop="@dimen/margin_ten"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBillPayments"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_five"
+                android:elevation="@dimen/margin_ten"
+                android:background="@drawable/button_back1"
+                tools:listitem="@layout/layout_banking_list"/>
+            <com.example.locktrust.widgets.CustomTextViewExtraBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tools"
+                android:layout_marginTop="@dimen/margin_ten"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_five"
+                android:elevation="@dimen/margin_ten"
+                android:background="@drawable/button_back1"
+                tools:listitem="@layout/layout_banking_list"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_one_hundred"
+
+                android:layout_margin="@dimen/margin_ten"
+                android:background="@drawable/bg_images">
+
+                <ImageView
+                    android:id="@+id/ivDashboardIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dashboard_icon"
+                    android:padding="@dimen/size_twenty"
+                    tools:ignore="MissingConstraints" />
+
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/card_message"
+                    app:layout_constraintLeft_toRightOf="@id/ivDashboardIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDashboardIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivDashboardIcon"
+                    android:layout_marginHorizontal="@dimen/margin_ten"
+                 />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

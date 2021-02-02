@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <LinearLayout
+        android:id="@+id/lay_buttons"
+        style="@style/matchWidth"
+        android:orientation="horizontal">
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/buttonSort"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/margin_ten"
+            android:paddingStart="@dimen/margin_fifty"
+            android:drawablePadding="@dimen/margin_ten"
+            app:drawableLeftCompat="@drawable/ic_sort"
+            android:text="@string/sort"/>
+        <View
+            android:id="@+id/tv_line1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/margin_small"
+            app:layout_constraintBottom_toTopOf="@+id/lay_buttons"
+            android:background="@color/lightgrey" />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/buttonFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:paddingVertical="@dimen/margin_ten"
+            app:drawableLeftCompat="@drawable/ic_filter"
+            android:paddingStart="@dimen/margin_fifty"
+            android:drawablePadding="@dimen/margin_ten"
+            android:text="@string/filter" />
+    </LinearLayout>
+</RelativeLayout>

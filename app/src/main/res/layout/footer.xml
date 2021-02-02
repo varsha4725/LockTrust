@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlFooter"
+
+   >
+
+    <LinearLayout
+        android:id="@+id/llBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fbLive"
+        android:layout_marginTop="-45dp"
+        android:background="@color/white"
+        android:elevation="@dimen/margin_small"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llHome"
+            style="@style/llFooter"
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                style="@style/ivFooter"
+                android:id="@+id/ivFooterHome"
+                app:srcCompat="@drawable/ic_home" />
+
+            <TextView
+                android:id="@+id/tvFooterHome"
+                style="@style/tvFooter"
+                android:text="@string/home" />
+
+
+        </LinearLayout>
+
+        <!--Serias-->
+        <LinearLayout
+            android:id="@+id/llFooterCoursesTutors"
+            style="@style/llFooter"
+            android:paddingVertical="@dimen/margin_small"
+           >
+
+            <ImageView
+                android:id="@+id/ivFooterCoursesTutors"
+                style="@style/ivFooter"
+                android:layout_width="wrap_content"
+                 app:srcCompat="@drawable/ic_course" />
+
+            <TextView
+                android:id="@+id/tvFooterCoursesTutors"
+                style="@style/tvFooter"
+                android:text="@string/courses_and_tutors" />
+
+
+        </LinearLayout>
+        <!--Search-->
+        <LinearLayout
+            android:id="@+id/llReports"
+            style="@style/llFooter"
+            android:padding="@dimen/margin_small"
+            android:visibility="invisible">
+
+            <ImageView
+                style="@style/ivFooter"
+                android:background="@drawable/ic_home_theme" />
+
+            <TextView
+                android:id="@+id/tvFooterSearch"
+                style="@style/tvFooter"
+                android:text="@string/reports" />
+
+            <View
+                android:id="@+id/vSearch"
+                style="@style/vFooter" />
+        </LinearLayout>
+        <!--MyCourses-->
+        <LinearLayout
+            android:id="@+id/llFooterMyCourses"
+            style="@style/llFooter"
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                style="@style/ivFooter"
+                android:id="@+id/ivMyCourses"
+                app:srcCompat="@drawable/ic_course"/>
+
+            <TextView
+                android:id="@+id/tvFooterMyCourses"
+                style="@style/tvFooter"
+                android:text="@string/my_courses" />
+
+
+        </LinearLayout>
+        <!--Wallet-->
+        <LinearLayout
+            android:id="@+id/llFooterWallet"
+            style="@style/llFooter"
+
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                style="@style/ivFooter"
+                android:id="@+id/ivFooterWallet"
+                app:srcCompat="@drawable/ic_wallet" />
+
+            <TextView
+                android:id="@+id/tvFooterWallet"
+                style="@style/tvFooter"
+                android:text="@string/wallet" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fbLive"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_gradient_solid"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:padding="@dimen/margin_small"
+        android:layout_centerHorizontal="true"
+        >
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@drawable/icon_live"/>
+    </FrameLayout>
+</RelativeLayout>

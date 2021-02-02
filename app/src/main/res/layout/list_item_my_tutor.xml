@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/margin_fifteen"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llTutor"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageTutor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            android:src="@drawable/studying1" />
+
+
+        <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvTutorName"
+            style="@style/wrapBoth"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/white"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textColor="@color/darkBlue"
+            tools:text="My Name testing the name is " />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/tvProfession"
+            style="@style/wrapBoth"
+            android:minLines="3"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:gravity="center"
+            tools:text="Profession" />
+
+        <com.example.locktrust.widgets.TextView
+            android:id="@+id/tvEducationTutor"
+            style="@style/wrapBoth"
+            android:maxLines="2"
+            android:minLines="2"
+             android:gravity="center"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            tools:text="University Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RatingBar
+                android:id="@+id/ratingBarTutor"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar"
+                tools:rating="3.5" />
+            <com.example.locktrust.widgets.TextView
+                android:id="@+id/tvRating"
+                style="@style/wrapBoth"
+                android:layout_gravity="center_horizontal"
+               android:layout_marginStart="@dimen/margin_small"
+                android:gravity="center"
+                tools:text="4.3" />
+
+        </LinearLayout>
+
+
+       <!-- <com.example.locktrust.widgets.CustomTextViewHeavy
+            android:id="@+id/tvViewProfileTutor"
+            style="@style/wrapBoth"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/skybluedark"
+            android:textSize="@dimen/text_Vsmall"
+            tools:text="VIEW PROFILE"
+
+            />
+-->
+        <Button
+            android:id="@+id/btnTutorInfo"
+            style="@style/btnContactUs"
+            android:layout_width="120dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/margin_ten"
+            android:text="@string/view_profile"
+            android:textSize="@dimen/text_Vsmall" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/ivSendMail"
+        app:srcCompat="@drawable/ic_edit_mail"
+        android:layout_gravity="right|top"
+        android:padding="@dimen/margin_small"/>
+</androidx.cardview.widget.CardView>

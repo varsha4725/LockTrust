@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+       style="@style/matchWidth"
+        android:layout_margin="@dimen/margin_ten"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/corner_curve"
+        android:elevation="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_ten">
+
+
+
+        <RelativeLayout
+           style="@style/matchBoth"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+           >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llUpper"
+                android:orientation="horizontal">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    android:id="@+id/tvTitle"
+                    style="@style/StandardMargin"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_toLeftOf="@+id/ivExpand"
+                    android:textSize="@dimen/common_text"
+                    android:textStyle="bold"
+                    tools:text="This is demo dterasjosjdflkjaslkfj"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivExpand"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center"
+                    android:padding="@dimen/margin_small"
+                    android:src="@drawable/ic_down_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llDescription"
+                style="@style/matchWidth"
+               android:layout_below="@+id/llUpper"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <View
+                    android:id="@+id/tv_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/lightgrey" />
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvDescription"
+                    style="@style/wrapBoth"
+                    android:textSize="@dimen/text_small"
+                    tools:text="This is the inforamtion of the containt which is used for all tha date handle"
+                    android:layout_margin="@dimen/margin_ten" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

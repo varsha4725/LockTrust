@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_small">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="@dimen/margin_fifteen">
+        <LinearLayout
+            android:layout_width="@dimen/home__featured_course_size"
+            android:layout_height="wrap_content"
+            android:id="@+id/llCourse"
+            android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imageFeaturedCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/studying1"
+                    android:background="@drawable/card_background"/>
+
+
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+               style="@style/wrapBoth"
+                android:id="@+id/tvCourseTitle"
+                tools:text="SubjectName "
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/minus_margin_fifteen"
+                android:background="@drawable/home_featured_label_background"
+                android:elevation="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingStart="@dimen/margin_ten"
+                android:paddingEnd="@dimen/margin_ten"
+                android:textColor="@color/white"
+                android:maxLength="15"
+                android:textSize="@dimen/text_ten"
+                />
+            <com.example.locktrust.widgets.TextView
+                style="@style/wrapBoth"
+                android:layout_width="match_parent"
+                android:id="@+id/tvSubjectTitle"
+                android:gravity="center"
+                android:padding="@dimen/margin_small"
+                tools:text="Applied Mathematics"
+                android:textSize="@dimen/common_text"
+                android:minLines="2"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/darkgrey"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_ten"/>
+
+           <!-- <com.example.locktrust.widgets.TextView
+                style="@style/wrapBoth"
+                android:id="@+id/tvGradeTitle"
+                tools:text="Std XII"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/darkgrey"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_ten"
+                android:layout_gravity="center_horizontal"/>-->
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

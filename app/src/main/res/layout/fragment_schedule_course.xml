@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/matchBoth"
+        android:id="@+id/nswScheduleCourses"
+        android:layout_below="@+id/llheader"
+        tools:visibility="gone"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layoutBaseHome"
+            style="@style/matchBoth"
+            android:background="@color/light_grey"
+            android:orientation="vertical">
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/wrapBoth"
+                android:textSize="@dimen/common_text"
+                android:id="@+id/tvCourseName"
+                android:textColor="@color/darkBlue"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:layout_marginTop="@dimen/margin_common"
+                tools:text="Applied Mathematics cbsc class 12th"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvScheduleCourseTutors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_common"
+                android:orientation="vertical"
+                android:scrollbars="none"
+                tools:itemCount="2"
+                tools:listitem="@layout/list_item_my_tutor" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/no_record_found"
+
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        tools:visibility="visible"/>
+</RelativeLayout>

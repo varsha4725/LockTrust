@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvInvoiceList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:padding="@dimen/margin_common"
+        app:cardCornerRadius="@dimen/margin_fifteen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llInvoice"
+            android:padding="@dimen/margin_ten"
+            android:orientation="vertical">
+
+            <RelativeLayout style="@style/matchWidth"
+                >
+
+                <LinearLayout
+
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.example.locktrust.widgets.CustomTextViewHeavy
+                        android:id="@+id/tvSubjectName"
+                        style="@style/wrapBoth"
+                        android:layout_columnWeight="1"
+                        android:text="@string/elements_of_business"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/text_sixteen"
+
+                        />
+                    <com.example.locktrust.widgets.TextView
+                        android:id="@+id/tvClassName"
+                        style="@style/wrapBoth"
+                        android:layout_marginTop="@dimen/margin_small"
+                         android:text="@string/sample_class" />
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ivDownload"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:src="@drawable/icon_download" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/matchWidth"
+                android:orientation="horizontal">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/BoldText"
+                    android:text="@string/date" />
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvDateTime"
+                    style="@style/simpleText"
+                    android:text="12 Sep 2010" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/matchWidth"
+                android:orientation="horizontal">
+                <com.example.locktrust.widgets.CustomTextViewHeavy
+                    style="@style/BoldText"
+                    android:text="@string/transaction_id" />
+
+                <com.example.locktrust.widgets.TextView
+                    android:id="@+id/tvTransactionId"
+                    style="@style/simpleText"
+                    android:text="asfkjan54564" />
+            </LinearLayout>
+
+            <com.example.locktrust.widgets.CustomTextViewHeavy
+                style="@style/BoldText"
+                android:id="@+id/tvInvoicePrice"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                tools:text="Price Erro" />
+
+       </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
