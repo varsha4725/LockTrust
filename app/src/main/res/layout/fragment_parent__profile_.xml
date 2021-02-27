@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etFullName"
                     style="@style/edtLogin"
                     android:layout_marginTop="@dimen/margin_fifty"
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etEmailId"
                     style="@style/edtLogin"
                     android:layout_marginTop="10dp"
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etPhoneNumber"
                     style="@style/edtLogin"
                     android:layout_marginTop="10dp"
@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etDateOfBirth"
                     style="@style/edtLogin"
                     android:layout_marginTop="@dimen/margin_ten"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etJoinDate"
                     style="@style/edtLogin"
                     android:layout_marginTop="@dimen/margin_ten"
@@ -116,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etCountry"
                     style="@style/edtLogin"
                     android:layout_marginTop="10dp"
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etState"
                     style="@style/edtLogin"
                     android:layout_marginTop="10dp"
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etCity"
                     style="@style/edtLogin"
                     android:layout_marginTop="10dp"
@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.locktrust.widgets.TextView
+                <com.example.locktrust.widgets.CustomTextViewMedium
                     android:id="@+id/etAddress"
                     style="@style/edtLogin"
                     android:layout_marginTop="@dimen/margin_ten"

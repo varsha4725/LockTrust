@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.locktrust.Activities.HomeActivity;
 import com.example.locktrust.Adapters.BankListAdapter;
 import com.example.locktrust.Adapters.CardListAdapter;
 import com.example.locktrust.Model.ModelSample.CardListSample;
@@ -61,7 +63,7 @@ public class HomeFragment extends Fragment implements Callback {
     RecyclerView rvTools;
     @BindView(R.id.ivDashboardIcon)
     ImageView ivDashboardIcon;
-
+    HomeActivity context;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -209,10 +211,10 @@ public class HomeFragment extends Fragment implements Callback {
             AlertDialog.Builder build = new AlertDialog.Builder(context);
             final AlertDialog okCancelDialog;
             View view = LayoutInflater.from(context).inflate(R.layout.layout_popup_options, null);
+            view.setAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_in_anim));
             build.setView(view);
             okCancelDialog = build.create();
-            okCancelDialog.getWindow().getAttributes().windowAnimations = R.anim.animation_rotate;
-
+            okCancelDialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in_anim;
             okCancelDialog.show();
         }
     }

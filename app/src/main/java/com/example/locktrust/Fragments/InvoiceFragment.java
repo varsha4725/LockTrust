@@ -30,7 +30,7 @@ import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link InvoiceFragment#newInstance} factory method to
+ * Use the {@link InvoiceFragment#} factory method to
  * create an instance of this fragment.
  */
 public class InvoiceFragment extends Fragment {
@@ -123,9 +123,4 @@ public class InvoiceFragment extends Fragment {
         invoiceListSamples.add(new InvoiceListSample("varsha@gmail.com","12243","23/12/2020"));
         invoiceListSamples.add(new InvoiceListSample("varsha@gmail.com","12243","23/12/2020"));
     }
-
-    ObjectAnimator anim = (ObjectAnimator) AnimatorInflater.loadAnimator(mContext, R.animator.flipping);
-    anim.setTarget(A View Object reference goes here i.e. ImageView);
-    anim.setDuration(3000);
-    anim.start();
 }

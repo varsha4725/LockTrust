@@ -33,8 +33,12 @@ import com.example.locktrust.widgets.CustomTextViewHeavy;
 import com.example.locktrust.widgets.CustomTextViewMedium;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
+import com.nineoldandroids.animation.AnimatorInflater;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static com.example.locktrust.Utils.AppDataHolder.mContext;
 
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener, DialogListener {
@@ -50,8 +54,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             tvHelp, tvPrivacyPolicy, tvTermsConditions, tvDoesDonts, tvDespute,tvRefundPayment, tvPayRefund,tvAboutUs,tvcomplaints,
             tvMenuName, tvFooterCoursesTutors, tvFooterWallet, tvFooterMyCourses,tvFaq,tvMyTutor,tvCounsling;
     public TextView tvCartItemCount, tvFooterHome;
-    private LinearLayout llLogout, llHome, llFooterWallet, llFooterMyCourses;
-    private LinearLayout llFooterCoursesTutors;
+    private LinearLayout llLogout, llHome, llFooterWallet, llFooterMyCourses,layoutMyCourse;
+    private LinearLayout llFooterCoursesTutors,layoutHome;
     private FrameLayout fbLive;
     public FrameLayout flCart,flDownload;
     private boolean mIsBackVisible;
@@ -132,6 +136,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         tvcomplaints = (TextView) findViewById(R.id.tvcomplaints);
         tvMyTutor = (TextView) findViewById(R.id.tvMyTutor);
         tvCounsling = (TextView)findViewById(R.id.tvCounsling);
+        layoutHome = (LinearLayout)findViewById(R.id.layoutHome);
+        layoutMyCourse = (LinearLayout)findViewById(R.id.layoutMYcourse);
         tvHome.setOnClickListener(this);
         tvMyCourses.setOnClickListener(this);
         tvFooterMyCourses.setOnClickListener(this);
@@ -162,6 +168,20 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         tvFaq.setOnClickListener(this);
         tvRefundPayment.setOnClickListener(this);
         tvCounsling.setOnClickListener(this);
+        layoutMyCourse.setVisibility(View.GONE);
+
+        ObjectAnimator anim = (ObjectAnimator) AnimatorInflater.loadAnimator(this, R.animator.flipcomplete);
+        anim.setTarget(layoutHome);
+        anim.setDuration(2000);
+        anim.start();
+        ObjectAnimator anim1 = (ObjectAnimator) AnimatorInflater.loadAnimator(this, R.animator.flipcomplete);
+
+        layoutMyCourse.setVisibility(View.VISIBLE);
+        anim1.setTarget(layoutMyCourse);
+        anim1.setDuration(3000);
+        anim1.start();
+
+
         mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
         mDrawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -209,7 +229,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             llFooterWallet.setVisibility(View.GONE);
 
 
-
+/*
             tvMyCart.setVisibility(View.GONE);
             tvlocktrustCredits.setVisibility(View.GONE);
             tvHelp.setVisibility(View.GONE);
@@ -223,7 +243,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             tvAboutUs.setVisibility(View.GONE);
             tvcomplaints.setVisibility(View.GONE);
             tvMyTutor.setVisibility(View.VISIBLE);
-            flCart.setVisibility(View.GONE);
+            flCart.setVisibility(View.GONE);*/
         }
 
     }
